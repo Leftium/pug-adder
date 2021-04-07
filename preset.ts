@@ -1,6 +1,6 @@
 import { Preset, color } from "apply";
 
-const preProcessorOptions = { coffeescript: { bare: true } }
+const preProcessorOptions = {}
 
 const makePreprocessor = (oldOptions, indent) => {
 	if (oldOptions.match(/^\s*$/)) oldOptions = '{}';
@@ -26,7 +26,7 @@ const addPreprocessor = (otherPreprocessors) => {
 	}
 }
 
-Preset.setName("svelte-add/coffeescript");
+Preset.setName("svelte-add/pug");
 
 const SNOWPACK_SVELTEKIT = "snowpack-sveltekit";
 const VITE = "vite";
@@ -55,7 +55,7 @@ Preset.edit("package.json").update((content, preset) => {
 Preset.group((preset) => {
 	preset.editJson("package.json").merge({
 		devDependencies: {
-			"coffeescript": "^2.5.1",
+			"pug": "^3.0.2",
 			"svelte-preprocess": "next",
 		},
 	});
@@ -94,8 +94,8 @@ Preset.group((preset) => {
 	preset.edit('src/routes/index.svelte').update((content) => {
 		let result = content;
 
-		if (!result.includes('href="/coffeescript-example"')) {
-		   result = result.replace(`<main>`, `<main>\n\t<a href="/coffeescript-example" class="button is-primary">CoffeeScript Example</a>`);
+		if (!result.includes('href="/pug-example"')) {
+		   result = result.replace(`<main>`, `<main>\n\t<br><a href="/pug-example" class="button is-primary">Pug Example</a>`);
 		}
 		return result;
 	});

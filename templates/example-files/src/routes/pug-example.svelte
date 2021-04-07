@@ -1,40 +1,32 @@
-<script lang="coffee">
-	count = 0
+<script>
+	import Counter from '$lib/Counter.svelte';
 
-	# Svelte $: reactive syntax is illegal in CoffeeScript.
-    # The following trick sandwiches reactive CoffeeScript
-	# between two bits of escaped JS that start/stop the
-	# reactive block.
+	let user = { loggedIn: false };
 
-	`$: {`  ## Start Svelte reactive block.
-	console.log {count}
-	if count >= 10
-		alert 'count is dangerously high!'
-		count = 9
-	`}`     ## End reactive block.
-
-
-	# This statement is outside the reactive block,
-	# so it will only be executed once.
-	console.log "Hello CoffeeScript! No parentheses/semicolons needed!"
-
-
-	handleClick = () ->
-		count += 1
-
+	function toggle() {
+		user.loggedIn = !user.loggedIn;
+	}
 </script>
 
-<main>
-	<h1>CoffeeScript + Svelte Reactivity</h1>
+<template lang="pug">
+	main
+		h1 Pug+Svelte: Else-if Logic Blocks
+		
+		p
+			| How to 
+			a(href="https://github.com/sveltejs/svelte-preprocess/blob/main/docs/preprocessing.md#pug") use Pug in Svelte
 
-	<button on:click={handleClick}>
-		Clicked {count} {count === 1 ? 'time' : 'times'}
-	</button>
+		p
+			| Compare to 
+			a(href="https://svelte.dev/tutorial/else-blocks") original example HTML
 
-	<p>Compare to the original JavaScript version at: <br />
-	<a href="https://svelte.dev/tutorial/reactive-statements">
-	svelte.dev/tutorial/reactive-statements</a></p>
-</main>
+		+if('user.loggedIn')
+			p: button(on:click='{toggle}') Log out
+			p: Counter
+			+else
+				p: button(on:click='{toggle}') Log in
+
+</template>
 
 <style>
 	main {
@@ -43,3 +35,5 @@
 		margin: 0 auto;
 	}
 </style>
+
+

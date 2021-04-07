@@ -1,7 +1,7 @@
-<h1 align="center">☕ Add CoffeeScript to Svelte</h1>
+<h1 align="center">🐶 Add Pug to Svelte</h1>
 
 ## ❓ What is this?
-This is an **experimental** command to run to add CoffeeScript to your SvelteKit project or Vite-powered Svelte app.
+This is an **experimental** command to run to add Pug to your SvelteKit project or Vite-powered Svelte app.
 
 ## 🧰 Adding to SvelteKit
 You must start with a fresh copy of the official SvelteKit template, which is currently created by running this command:
@@ -9,9 +9,9 @@ You must start with a fresh copy of the official SvelteKit template, which is cu
 npm init svelte@next
 ```
 
-Once that is set up, run this command in your project directory to set up CoffeeScript:
+Once that is set up, run this command in your project directory to set up Pug:
 ```sh
-npx svelte-add Leftium/coffeescript-adder
+npx svelte-add Leftium/pug-adder
 ```
 
 ## ⚡️ Adding to Vite
@@ -20,24 +20,22 @@ You must start with a fresh copy of the official Vite-powered Svelte app templat
 npm init @vitejs/app  # Choose svelte or svelte-ts
 ```
 
-Once that is set up, run this command in your project directory to set up coffeescript:
+Once that is set up, run this command in your project directory to set up Pug:
 ```sh
-npx svelte-add Leftium/coffeescript-adder
+npx svelte-add Leftium/pug-adder
 ```
 
 ## 🛠 Usage
 After the adder runs,
-* You can write coffeescript syntax in the `script` blocks in Svelte files.
+* You can write Pug syntax in the <template lang="pug"> blocks in Svelte files.
 
-* You can import coffeescript modules in Svelte files.
-
-* You can apply *another* [Svelte Adder](https://github.com/svelte-add/svelte-adders) to your project for more functionality. **Note:** some adders (specifically postcss and bulma) overwrite sveltePrepocess() options. Ensure the required options are set by either running coffeescript-adder last, or running it again after adding postcss/bulma (coffeescript-adder preserves the options).
+* You can apply *another* [Svelte Adder](https://github.com/svelte-add/svelte-adders) to your project for more functionality.
 
 ## 😵 Help! I have a question
-[Create an issue](https://github.com/Leftium/coffeescript-adder/new) and I'll try to help.
+[Create an issue](https://github.com/Leftium/pug-adder/new) and I'll try to help.
 
 ## 😡 Fix! There is something that needs improvement
-[Create an issue](https://github.com/Leftium/coffeescript-adder/issues/new) or [pull request](https://github.com/Leftium/coffeescript-adder/pulls) and I'll try to fix.
+[Create an issue](https://github.com/Leftium/pug-adder/issues/new) or [pull request](https://github.com/Leftium/pug-adder/pulls) and I'll try to fix.
 
 These are new tools, so there are likely to be problems in this project. Thank you for bringing them to my attention or fixing them for me.
 
