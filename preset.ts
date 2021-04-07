@@ -95,7 +95,7 @@ Preset.group((preset) => {
 		let result = content;
 
 		if (!result.includes('href="/pug-example"')) {
-		   result = result.replace(`<main>`, `<main>\n\t<br><a href="/pug-example" class="button is-primary">Pug Example</a>`);
+		   result = result.replace(`<main>`, `<main>\n\t<br><a href="/examples/pug" class="button is-primary">Pug Example</a>`);
 		}
 		return result;
 	});

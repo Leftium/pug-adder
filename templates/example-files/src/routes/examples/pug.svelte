@@ -18,7 +18,7 @@
 
 		p
 			| Compare to 
-			a(href="https://svelte.dev/tutorial/else-blocks") original example HTML
+			a(href="https://svelte.dev/tutorial/else-blocks") original example in HTML
 
 		+if('user.loggedIn')
 			p: button(on:click='{toggle}') Log out
