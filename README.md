@@ -27,7 +27,7 @@ npx svelte-add Leftium/pug-adder
 
 ## 🛠 Usage
 After the adder runs,
-* You can write Pug syntax in the <template lang="pug"> blocks in Svelte files.
+* You can write Pug syntax in a \<template lang="pug"> block in Svelte files.
 
 * You can apply *another* [Svelte Adder](https://github.com/svelte-add/svelte-adders) to your project for more functionality.
 
